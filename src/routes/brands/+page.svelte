@@ -17,7 +17,9 @@
 </script>
 
 <main>
-	<LogoB />
+	<a href="/">
+		<LogoB />
+	</a>
 
 	<nav>
 		{#each categories as category (category)}
@@ -43,17 +45,29 @@
 		padding-top: calc(var(--h-h) + 32rem);
 		padding-bottom: 80rem;
 		padding-inline: var(--p-i);
+		@media (width < 770px) {
+			padding-top: 64rem;
+			padding-bottom: 72rem;
+		}
 	}
 	nav {
 		margin-top: 80rem;
 		display: flex;
 		justify-content: center;
 		gap: 88rem;
+
+		@media (width < 770px) {
+			margin-top: 56rem;
+			gap: 40rem;
+		}
 	}
 	button {
 		font-size: 20rem;
 		font-weight: 500;
 		text-transform: uppercase;
+		@media (width < 770px) {
+			font-size: 15rem;
+		}
 	}
 	button.active {
 		font-weight: bold;
@@ -63,10 +77,17 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@media (width < 770px) {
+			margin-top: 56rem;
+		}
 	}
 	li {
 		font-size: 60rem;
 		line-height: 1;
 		text-transform: capitalize;
+		@media (width < 770px) {
+			font-size: 30rem;
+			line-height: 1.2;
+		}
 	}
 </style>

@@ -22,11 +22,11 @@
 		<nav>
 			<a href="/about">About</a>
 			<a href="/contact">Contact Us</a>
-			<a href="/faq">FAQ</a>
+			<a href="/faq">Careers</a>
 		</nav>
-		<nav>
-			<a href="/privacy">About</a>
-			<a href="/careers">Careers</a>
+		<nav class="d-o">
+			<a href="/privacy">Privacy Policy</a>
+			<a href="/careers">FAQ</a>
 			<a href="/faq">Book An Appointment</a>
 		</nav>
 	</div>
@@ -42,14 +42,27 @@
 			<a href="mailto:showroom@maisonpyramide.com">SHOWROOM@MAISONPYRAMIDE.COM</a>
 		</div>
 	</div>
+
+	<nav class="m-o">
+		<a href="/privacy">Privacy Policy</a>
+		<a href="/careers">FAQ</a>
+	</nav>
 </footer>
 
 <style>
 	footer {
 		padding: 32rem var(--p-i);
+		@media (width < 770px) {
+			padding-block: 16rem var(--p-i);
+		}
 	}
 	.t {
 		display: flex;
+		@media (width < 770px) {
+			flex-direction: column;
+			max-width: 300rem;
+			margin-inline: auto;
+		}
 	}
 	.newsletter {
 		flex: 4;
@@ -65,6 +78,9 @@
 		margin-top: 32rem;
 		border-bottom: 1px solid black;
 		position: relative;
+		@media (width < 770px) {
+			width: unset;
+		}
 	}
 	input {
 		padding-bottom: 12rem;
@@ -75,7 +91,7 @@
 	form button {
 		position: absolute;
 		right: 0;
-        bottom: 12rem;
+		bottom: 12rem;
 		width: 16rem;
 	}
 	.newsletter p {
@@ -84,6 +100,10 @@
 		font-size: 12rem;
 		font-weight: 300;
 		line-height: 1;
+		@media (width < 770px) {
+			width: unset;
+			text-align: center;
+		}
 	}
 
 	nav {
@@ -91,6 +111,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: 16rem;
+		@media (width < 770px) {
+			flex-direction: row;
+			justify-content: center;
+			margin-top: 40rem;
+		}
 	}
 	nav a {
 		font-weight: 14rem;
@@ -98,24 +123,45 @@
 	}
 	.logo {
 		margin-top: 120rem;
+		@media (width < 770px) {
+			margin-top: 48rem;
+		}
 	}
 	.b {
 		margin-top: 32rem;
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
+
+		@media (width < 770px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 20rem;
+		}
 	}
 	.b .l {
 		width: 360rem;
+		@media (width < 770px) {
+			width: 300rem;
+		}
 	}
 	.b .r {
 		display: flex;
 		gap: 40rem;
+
+		@media (width < 770px) {
+			font-size: 12rem;
+		}
 	}
 	.b .r a:first-child {
 		font-weight: 450;
 	}
 	.b .r a:last-child {
 		font-weight: 300;
+	}
+	nav.m-o {
+		margin-top: 24rem;
+		justify-content: space-between;
+		font-size: 10rem;
 	}
 </style>

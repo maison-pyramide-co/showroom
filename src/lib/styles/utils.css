@@ -3,7 +3,7 @@
 	--h-h: 43.5rem;
 	--f-h: 30rem;
 	@media (width < 770px) {
-		--p-i: 16rem;
+		--p-i: 20rem;
 		--h-h: 74rem;
 		--f-h: 40rem;
 	}

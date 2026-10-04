@@ -6,6 +6,7 @@
 </script>
 
 <section>
+	<h2 class="m-o">BRANDS</h2>
 	<div class="t">
 		<img src={brand1I} alt="" />
 		<img src={brand2I} alt="" />
@@ -13,7 +14,7 @@
 		<img src={brand4I} alt="" />
 	</div>
 	<div class="b">
-		<h2>BRANDS</h2>
+		<h2 class="d-o">BRANDS</h2>
 		<a href="/brands">DISCOVER OUR BRANDS</a>
 	</div>
 </section>
@@ -21,20 +22,35 @@
 <style>
 	section {
 		padding: 160rem 90rem;
+		@media (width < 770px) {
+			padding: 48rem var(--p-i);
+		}
 	}
 	.t {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		@media (width < 770px) {
+			grid-template-columns: 1fr 1fr;
+			margin-top: 32rem;
+		}
 	}
 	.b {
 		margin-top: 24rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (width < 770px) {
+			margin-top: 32rem;
+			justify-content: center;
+		}
 	}
 	h2 {
 		font-size: 30rem;
 		font-weight: 450;
+		@media (width < 770px) {
+			font-size: 25rem;
+			text-align: center;
+		}
 	}
 	a {
 		font-size: 14rem;
