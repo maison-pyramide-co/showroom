@@ -1,20 +1,26 @@
 <script lang="ts">
-	import Chev from '$lib/assets/icons/chev.svelte';
+	import ChevW from '$lib/assets/icons/chev-w.svelte';
+	import ChevB from '$lib/assets/icons/chev-b.svelte';
 	import LogoB from '$lib/assets/icons/logo-b.svelte';
-	import MpgLogo from '$lib/assets/icons/mpg-logo.svelte';
+	import MpgLogoW from '$lib/assets/icons/mpg-logo-w.svelte';
+	import MpgLogoB from '$lib/assets/icons/mpg-logo-b.svelte';
 	import { page } from '$app/state';
-	const isContact = page.url.pathname == '/contact';
+	import LogoW from '$lib/assets/icons/logo-w.svelte';
+	const isBlack = $derived(page.url.pathname === '/contact');
 </script>
 
-<footer id="f">
-
+<footer id="f" class:black={isBlack}>
 	<div class="t">
 		<div class="newsletter">
 			<h4>SIGN UP FOR <span>MP SHOWROOM</span> UPDATES</h4>
 			<form action="">
 				<input type="email" placeholder="Email" />
 				<button type="submit">
-					<Chev />
+					{#if isBlack}
+						<ChevW />
+					{:else}
+						<ChevB />
+					{/if}
 				</button>
 			</form>
 			<p>
@@ -35,12 +41,20 @@
 	</div>
 
 	<div class="logo">
-		<LogoB />
+		{#if isBlack}
+			<LogoW />
+		{:else}
+			<LogoB />
+		{/if}
 	</div>
 
 	<div class="b">
 		<div class="l">
-			<MpgLogo />
+			{#if isBlack}
+				<MpgLogoW />
+			{:else}
+				<MpgLogoB />
+			{/if}
 		</div>
 		<div class="r">
 			<a href="/">INSTAGRAM</a>
@@ -61,6 +75,11 @@
 			padding-block: 16rem var(--p-i);
 		}
 	}
+	footer.black {
+		background-color: black;
+		color: white;
+	}
+
 	.t {
 		display: flex;
 		@media (width < 770px) {
@@ -87,11 +106,17 @@
 			width: unset;
 		}
 	}
+	.black form {
+		border-bottom: 1px solid white;
+	}
 	input {
 		padding-bottom: 12rem;
 	}
 	input::placeholder {
 		opacity: 50%;
+	}
+	.black input::placeholder {
+		color: white;
 	}
 	form button {
 		position: absolute;

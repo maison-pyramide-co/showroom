@@ -18,6 +18,8 @@
 		padding-top: 80rem;
 		padding-inline: var(--p-i);
 		position: relative;
+		@media (width < 770px) {
+		}
 	}
 
 	.logo {
@@ -29,6 +31,12 @@
 		margin-top: -56rem;
 		width: 560rem;
 		margin-inline: auto;
+
+		@media (width < 770px) {
+			margin-top: 64rem;
+			width: 290rem;
+			height: 520rem;
+		}
 	}
 	h2 {
 		position: absolute;
@@ -37,5 +45,11 @@
 		text-align: center;
 		width: 100%;
 		line-height: 1;
+		@media (width < 770px) {
+			font-size: 100rem;
+			font-width: 600;
+			bottom: -80rem;
+			left: 0;
+		}
 	}
 </style>
