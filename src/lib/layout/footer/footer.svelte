@@ -2,9 +2,12 @@
 	import Chev from '$lib/assets/icons/chev.svelte';
 	import LogoB from '$lib/assets/icons/logo-b.svelte';
 	import MpgLogo from '$lib/assets/icons/mpg-logo.svelte';
+	import { page } from '$app/state';
+	const isContact = page.url.pathname == '/contact';
 </script>
 
 <footer id="f">
+
 	<div class="t">
 		<div class="newsletter">
 			<h4>SIGN UP FOR <span>MP SHOWROOM</span> UPDATES</h4>
@@ -30,9 +33,11 @@
 			<a href="/faq">Book An Appointment</a>
 		</nav>
 	</div>
+
 	<div class="logo">
 		<LogoB />
 	</div>
+
 	<div class="b">
 		<div class="l">
 			<MpgLogo />

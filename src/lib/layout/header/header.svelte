@@ -16,7 +16,7 @@
 		<a href="/partnerships">partnerships</a>
 	</div>
 	<div class="r d-o">
-		<a href="/contact-us">contact us</a>
+		<a href="/contact">contact us</a>
 	</div>
 
 	<button
