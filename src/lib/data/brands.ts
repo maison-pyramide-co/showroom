@@ -1,35 +1,44 @@
-// const brandss = [
-// 	'Burc Akyol',
-// 	'Roksanda',
-// 	'Mantu',
-// 	'SEV',
-// 	'Vivetta',
-// 	'Arrita Studio',
-// 	'Baro Lucas',
-// 	'1972Desa',
-// 	'Morphine',
-// 	'Celia B',
-// 	"L'atelier Nawbar",
-// 	'Christopher Esber',
-// 	'Pedro Garcia',
-// 	'Laquan Smith',
-// 	'Levuma',
-// 	'K Salamoon',
-// 	'Eera',
-// 	'Lehona',
-// 	'Ilio Smeraldo',
-// 	'Paris Georgia',
-// 	'Yasmin Mansour',
-// 	'Menghi',
-// 	'Rosantica'
-// ];
+import arrita from '$lib/assets/images/brands/arrita.jpg';
+import baro from '$lib/assets/images/brands/baro.jpg';
+import burc from '$lib/assets/images/brands/burc.jpg';
+import celia from '$lib/assets/images/brands/celia.jpg';
+// import desa from "$lib/assets/images/brands/desa.jpg";
+import eera from '$lib/assets/images/brands/eera.jpg';
+import esber from '$lib/assets/images/brands/esber.png';
+import ilio from '$lib/assets/images/brands/ilio.jpg';
+import laquan from '$lib/assets/images/brands/laquan.jpg';
+import lehona from '$lib/assets/images/brands/lehona.jpg';
+import levuma from '$lib/assets/images/brands/levuma.jpg';
+import mantu from '$lib/assets/images/brands/mantu.jpg';
+import menghi from '$lib/assets/images/brands/menghi.jpg';
+import morphine from '$lib/assets/images/brands/morphine.jpg';
+import nawbar from '$lib/assets/images/brands/nawbar.jpg';
+import okhtein from '$lib/assets/images/brands/okhtein.jpg';
+import paris from '$lib/assets/images/brands/paris.jpg';
+import pedro from '$lib/assets/images/brands/pedro.jpg';
+import roksanda from '$lib/assets/images/brands/roksanda.jpg';
+import rosantica from '$lib/assets/images/brands/rosantica.jpg';
+import salamoon from '$lib/assets/images/brands/salamoon.jpg';
+import sev from '$lib/assets/images/brands/sev.jpg';
+import vivetta from '$lib/assets/images/brands/vivetta.jpg';
+import yasmin from '$lib/assets/images/brands/yasmin.jpg';
 
-const brands = [
+export type Brand = {
+	id: number;
+	name: string;
+	category: string[];
+	joorLink?: string;
+	description: string;
+	image: any;
+};
+
+const raw: Brand[] = [
 	{
 		id: 1,
 		name: 'menghi',
 		category: ['ftw/acc'],
 		joorLink: '',
+		image: menghi,
 		description:
 			'Menghi elevates plastic footwear into a luxury product through Made in Italy craftsmanship, innovation and over 40 years of technical expertise. Its collection explores new shapes, materials and production processes across footwear, bags and accessories, with a focus on customization and more sustainable, certified materials.'
 	},
@@ -39,6 +48,7 @@ const brands = [
 		name: 'Morphine',
 		category: ['rtw'],
 		joorLink: '',
+		image: morphine,
 		description:
 			'MORPHINE.ONLINE is a genderfluid, ageless and seasonless collective built around sustainability, fashion, craft and individualism. Through curated vintage and upcycled deadstock, the platform gives existing designs and materials a renewed life through limited, one-of-a-kind pieces.'
 	},
@@ -47,6 +57,7 @@ const brands = [
 		name: 'Christopher Esber',
 		category: ['rtw'],
 		joorLink: 'https://www.jooraccess.com/christopheresber',
+		image: esber,
 		description:
 			'Christopher Esber has built a global reputation for contemporary tailoring with a sophisticated approach, in the mixing of traditional techniques and mastering a restrained method for cut-out-clad silhouettes. The collections radiate confidence and strength reflecting an unwavering quality and innovation in cut and developed textiles; with a luxurious yet easy to wear approach.'
 	},
@@ -55,6 +66,7 @@ const brands = [
 		name: 'Celia B',
 		category: ['rtw'],
 		joorLink: 'https://www.jooraccess.com/celiab',
+		image: celia,
 		description:
 			'Celia B is an ode to freedom, a celebration of the joy of life in all its forms. We design fun, statement and timeless pieces with a passion for textiles, a slight obsession over quality and a sensibility for craftsmanship.'
 	},
@@ -62,6 +74,7 @@ const brands = [
 		id: 5,
 		name: 'PEDRO GARCIA',
 		category: ['ftw/acc'],
+		image: pedro,
 		joorLink: '',
 		description:
 			'Pedro Garcia is a Spanish footwear brand rooted in a family shoemaking tradition dating back to 1925. Handcrafted in Elda, Spain, the brand combines artisanal expertise, refined materials and contemporary design to create timeless shoes and accessories with a distinctly modern Mediterranean spirit.'
@@ -69,6 +82,7 @@ const brands = [
 	{
 		id: 6,
 		name: "L'Atelier Nawbar",
+		image: nawbar,
 		category: ['jwl'],
 		joorLink: 'https://www.jooraccess.com/lateliernawbar',
 		description:
@@ -77,6 +91,7 @@ const brands = [
 	{
 		id: 7,
 		name: 'Eera',
+		image: eera,
 		category: ['jwl'],
 		description:
 			'Crafted in Italy from precious materials, the pieces stand out through bold color, polished finishes, and a distinctive contemporary attitude that feels both refined and expressive. Designed to be worn daily and styled freely, EERA delivers jewelry that is minimal in form yet statement making in presence.'
@@ -84,6 +99,7 @@ const brands = [
 	{
 		id: 8,
 		name: 'SEV',
+		image: sev,
 		category: ['rtw'],
 		joorLink: 'https://www.jooraccess.com/sophieetvoila',
 		description:
@@ -92,6 +108,7 @@ const brands = [
 	{
 		id: 9,
 		name: 'ROKSANDA',
+		image: roksanda,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -100,6 +117,7 @@ const brands = [
 	{
 		id: 10,
 		name: 'MANTU',
+		image: mantu,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -108,6 +126,7 @@ const brands = [
 	{
 		id: 11,
 		name: 'VIVETTA',
+		image: vivetta,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -116,6 +135,7 @@ const brands = [
 	{
 		id: 12,
 		name: 'ILIO SMERALDO',
+		image: ilio,
 		category: ['ftw/acc'],
 		joorLink: '',
 		description:
@@ -125,6 +145,7 @@ const brands = [
 	{
 		id: 14,
 		name: 'Arrita Studio',
+		image: arrita,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -133,6 +154,7 @@ const brands = [
 	{
 		id: 15,
 		name: 'Baro Lucas',
+		image: baro,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -141,6 +163,7 @@ const brands = [
 	{
 		id: 16,
 		name: 'Burc Akyol',
+		image: burc,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -149,6 +172,7 @@ const brands = [
 	{
 		id: 17,
 		name: 'K salamoon',
+		image: salamoon,
 		category: ['jwl'],
 		joorLink: '',
 		description:
@@ -157,6 +181,7 @@ const brands = [
 	{
 		id: 18,
 		name: 'Laquan Smith',
+		image: laquan,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -165,6 +190,7 @@ const brands = [
 	{
 		id: 19,
 		name: 'Lehona',
+		image: lehona,
 		category: ['jwl'],
 		joorLink: '',
 		description:
@@ -173,6 +199,7 @@ const brands = [
 	{
 		id: 20,
 		name: 'Levuma',
+		image: levuma,
 		category: ['jwl'],
 		joorLink: '',
 		description:
@@ -181,6 +208,7 @@ const brands = [
 	{
 		id: 21,
 		name: 'Okhtein',
+		image: okhtein,
 		category: ['jwl'],
 		joorLink: '',
 		description:
@@ -189,6 +217,7 @@ const brands = [
 	{
 		id: 22,
 		name: 'Paris Georgia',
+		image: paris,
 		category: ['rtw'],
 		joorLink: '',
 		description:
@@ -198,11 +227,32 @@ const brands = [
 	{
 		id: 24,
 		name: 'Yasmin Mansour',
+		image: yasmin,
 		category: ['ftw/acc'],
 		joorLink: '',
 		description:
 			'Rooted in Qatar, Yasmin Mansour is a prêt-à-couture house exploring a more purposeful approach to luxury fashion. Reimagined in 2020 around the creative potential of discarded materials, the brand combines high-end design with a focus on transformation, responsible creation and pushing the possibilities of sustainable fashion.'
 	}
 ];
+
+export const slugify = (name: string) =>
+	name
+		.normalize('NFD')
+		.replace(/[\u0300-\u036f]/g, '') // strip accents
+		.toLowerCase()
+		.replace(/['’]/g, '') // l'atelier -> latelier
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/(^-|-$)/g, '');
+
+export const brands = raw.map((b) => ({ ...b, slug: slugify(b.name) }));
+
+export const getBrand = (slug: string) => brands.find((b) => b.slug === slug);
+
+export const getRelatedBrands = (brand: Brand & { slug: string }, limit?: number) => {
+	const related = brands.filter(
+		(b) => b.id !== brand.id && b.category.some((c) => brand.category.includes(c))
+	);
+	return limit ? related.slice(0, limit) : related;
+};
 
 export default brands;
