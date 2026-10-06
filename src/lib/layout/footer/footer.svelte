@@ -31,12 +31,12 @@
 		<nav>
 			<a href="/about">About</a>
 			<a href="/contact">Contact Us</a>
-			<a href="/faq">Careers</a>
+			<a href="/">Careers</a>
 		</nav>
 		<nav class="d-o">
-			<a href="/privacy">Privacy Policy</a>
-			<a href="/careers">FAQ</a>
-			<a href="/faq">Book An Appointment</a>
+			<a href="/">Privacy Policy</a>
+			<a href="/">FAQ</a>
+			<a href="/">Book An Appointment</a>
 		</nav>
 	</div>
 
@@ -63,8 +63,8 @@
 	</div>
 
 	<nav class="m-o">
-		<a href="/privacy">Privacy Policy</a>
-		<a href="/careers">FAQ</a>
+		<a href="/">Privacy Policy</a>
+		<a href="/">FAQ</a>
 	</nav>
 </footer>
 
