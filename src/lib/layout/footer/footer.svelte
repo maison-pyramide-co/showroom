@@ -29,7 +29,7 @@
 			</p>
 		</div>
 		<nav>
-			<a href="/about">About</a>
+			<a href="/">About</a>
 			<a href="/contact">Contact Us</a>
 			<a href="/">Careers</a>
 		</nav>
