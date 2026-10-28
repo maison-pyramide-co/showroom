@@ -29,9 +29,9 @@
 <style>
 	main {
 		padding-block: 80rem;
-padding-inline: var(--p-i);
 	}
 	.logo {
+		display:block;
 		padding-inline: var(--p-i);
 	}
 	h1 {
