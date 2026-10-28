@@ -29,6 +29,7 @@
 <style>
 	main {
 		padding-block: 80rem;
+padding-inline: var(--p-i);
 	}
 	.logo {
 		padding-inline: var(--p-i);
