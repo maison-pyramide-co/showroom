@@ -11,33 +11,17 @@
 
 <footer id="f" class:black={isBlack}>
 	<div class="t">
-		<div class="newsletter">
-			<h4>SIGN UP FOR <span>MP SHOWROOM</span> UPDATES</h4>
-			<form action="">
-				<input type="email" placeholder="Email" />
-				<button type="submit">
-					{#if isBlack}
-						<ChevW />
-					{:else}
-						<ChevB />
-					{/if}
-				</button>
-			</form>
-			<p>
-				By entering your email address above, you agree to receive marketing messages from MP
-				SHOWROOM and agree to our terms of service and privacy policy.
-			</p>
-		</div>
 		<nav>
-			<a href="/">About</a>
 			<a href="/contact">Contact Us</a>
-			<a href="/">Careers</a>
+			<a href="/">Privacy Policy</a>
+			<a href="/">Terms and Conditions</a>
 		</nav>
-		<nav class="d-o">
+		<button class="d-o">BOOK AN APPOINTMENT</button>
+		<!-- <nav class="d-o">
 			<a href="/">Privacy Policy</a>
 			<a href="/">FAQ</a>
 			<a href="/">Book An Appointment</a>
-		</nav>
+		</nav> -->
 	</div>
 
 	<div class="logo">
@@ -47,6 +31,8 @@
 			<LogoB />
 		{/if}
 	</div>
+
+	<button class="m-o">BOOK AN APPOINTMENT</button>
 
 	<div class="b">
 		<div class="l">
@@ -61,16 +47,13 @@
 			<a href="mailto:showroom@maisonpyramide.com">SHOWROOM@MAISONPYRAMIDE.COM</a>
 		</div>
 	</div>
-
-	<nav class="m-o">
-		<a href="/">Privacy Policy</a>
-		<a href="/">FAQ</a>
-	</nav>
 </footer>
 
 <style>
 	footer {
 		padding: 32rem var(--p-i);
+		display: flex;
+		flex-direction: column;
 		@media (width < 770px) {
 			padding-block: 16rem var(--p-i);
 		}
@@ -83,78 +66,42 @@
 	.t {
 		display: flex;
 		@media (width < 770px) {
+			order: 3;
 			flex-direction: column;
-			max-width: 300rem;
-			margin-inline: auto;
-		}
-	}
-	.newsletter {
-		flex: 4;
-	}
-	h4 {
-		font-weight: 450;
-	}
-	h4 span {
-		font-weight: bold;
-	}
-	form {
-		width: 320rem;
-		margin-top: 32rem;
-		border-bottom: 1px solid black;
-		position: relative;
-		@media (width < 770px) {
-			width: unset;
-		}
-	}
-	.black form {
-		border-bottom: 1px solid white;
-	}
-	input {
-		padding-bottom: 12rem;
-	}
-	input::placeholder {
-		opacity: 50%;
-	}
-	.black input::placeholder {
-		color: white;
-	}
-	form button {
-		position: absolute;
-		right: 0;
-		bottom: 12rem;
-		width: 16rem;
-	}
-	.newsletter p {
-		margin-top: 32rem;
-		width: 430rem;
-		font-size: 12rem;
-		font-weight: 300;
-		line-height: 1;
-		@media (width < 770px) {
-			width: unset;
-			text-align: center;
+			/* max-width: 300rem; */
+			/* margin-inline: auto; */
 		}
 	}
 
 	nav {
 		flex: 2;
 		display: flex;
-		flex-direction: column;
-		gap: 16rem;
+		gap: 120rem;
 		@media (width < 770px) {
-			flex-direction: row;
-			justify-content: center;
+			justify-content: space-between;
 			margin-top: 40rem;
+			gap: unset;
 		}
 	}
 	nav a {
-		font-weight: 14rem;
+		font-size: 14rem;
 		font-weight: 300;
 	}
-	.logo {
-		margin-top: 120rem;
+	button {
+		font-size: 14rem;
+		padding: 4rem 24rem;
+		border-radius: 99rem;
+		border: 1px solid black;
 		@media (width < 770px) {
-			margin-top: 48rem;
+			margin-top: 40rem;
+			align-self: center;
+		}
+	}
+
+	.logo {
+		margin-top: 56rem;
+		@media (width < 770px) {
+			margin-top: 0;
 		}
 	}
 	.b {
@@ -188,10 +135,5 @@
 	}
 	.b .r a:last-child {
 		font-weight: 300;
-	}
-	nav.m-o {
-		margin-top: 24rem;
-		justify-content: space-between;
-		font-size: 10rem;
 	}
 </style>

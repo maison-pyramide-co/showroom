@@ -23,7 +23,7 @@
 	section {
 		padding: 160rem 90rem;
 		@media (width < 770px) {
-			padding: 48rem var(--p-i);
+			padding: 48rem var(--p-i) 80rem;
 		}
 	}
 	.t {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import LogoW from '$lib/assets/icons/logo-w.svelte';
-	import banI from '$lib/assets/images/contact/ban.png';
+	import banI from '$lib/assets/images/contact/ban.webp';
 </script>
 
 <section>
@@ -31,13 +31,14 @@
 		margin-top: -56rem;
 		width: 560rem;
 		margin-inline: auto;
-
+		aspect-ratio: 5/6;
 		@media (width < 770px) {
 			margin-top: 64rem;
 			width: 290rem;
 			height: 520rem;
 		}
 	}
+
 	h2 {
 		position: absolute;
 		bottom: 80rem;
