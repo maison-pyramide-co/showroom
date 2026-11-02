@@ -13,8 +13,8 @@
 	<div class="t">
 		<nav>
 			<a href="/contact">Contact Us</a>
-			<a href="/">Privacy Policy</a>
-			<a href="/">Terms and Conditions</a>
+			<a href="/privacy">Privacy Policy</a>
+			<a href="/terms">Terms and Conditions</a>
 		</nav>
 		<button class="d-o">BOOK AN APPOINTMENT</button>
 		<!-- <nav class="d-o">
