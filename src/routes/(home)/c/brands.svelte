@@ -5,7 +5,7 @@
 	import brand4I from '$lib/assets/images/home/brand4.png';
 </script>
 
-<section>
+<section id="s-brands">
 	<h2 class="m-o">BRANDS</h2>
 	<div class="t">
 		<img src={brand1I} alt="" />

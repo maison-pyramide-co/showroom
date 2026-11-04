@@ -8,8 +8,8 @@
 	};
 </script>
 
-<section>
-	<h2>SERVICES</h2>
+<section id="s-services">
+	<h2 data-ga="tr">SERVICES</h2>
 	<ul>
 		{#each services as service, i}
 			<li>

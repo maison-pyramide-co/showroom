@@ -1,9 +1,17 @@
-<script>
+<script lang="ts">
 	import LogoB from '$lib/assets/icons/logo-b.svelte';
 	import partnerships from '$lib/data/partnerships';
+	import { onMount } from 'svelte';
+	import animation from './_a';
+
+	let page: HTMLElement;
+
+	onMount(() => {
+		return animation(page);
+	});
 </script>
 
-<main>
+<main id="p" style:opacity="0" bind:this={page}>
 	<a href="/" class="logo">
 		<LogoB />
 	</a>
@@ -31,7 +39,7 @@
 		padding-block: 80rem;
 	}
 	.logo {
-		display:block;
+		display: block;
 		padding-inline: var(--p-i);
 	}
 	h1 {

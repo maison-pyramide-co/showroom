@@ -4,7 +4,7 @@
 	import banMI from '$lib/assets/images/services/ban-m.png';
 </script>
 
-<section>
+<section id="s-hero">
 	<picture>
 		<source srcset={banI} media="(min-width: 770px)" />
 		<img src={banMI} width="auto" height="auto" alt="logo" />

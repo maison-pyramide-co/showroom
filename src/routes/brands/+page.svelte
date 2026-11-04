@@ -1,6 +1,7 @@
 <script lang="ts">
 	import LogoB from '$lib/assets/icons/logo-b.svelte';
 	import brands from '$lib/data/brands';
+	import gsap from 'gsap';
 	const categories = ['all', 'rtw', 'jwl', 'ftw / acc'];
 	let activeCategory = $state('all');
 
@@ -14,6 +15,28 @@
 			? brands.filter((b) => b.category.includes(activeCategory.replace(/\s/g, '')))
 			: brands
 	);
+
+	let img: HTMLImageElement;
+	let src = $state('');
+	let x = $state(50);
+	let y = $state(50);
+
+	const show = (brand: { image: string }) => {
+		src = brand.image;
+		x = gsap.utils.random(20, 80); // vw, keeps the image away from the edges
+		y = gsap.utils.random(25, 75); // vh
+
+		gsap.fromTo(
+			img,
+			{ autoAlpha: 0, scale: 0.9, xPercent: -50, yPercent: -50 },
+			{ autoAlpha: 1, scale: 1, duration: 0.4, ease: 'power3.out', overwrite: true }
+		);
+	};
+
+	const hide = () => {
+		gsap.to(img, { autoAlpha: 0, duration: 0.3, ease: 'power2.out', overwrite: true });
+	};
+
 </script>
 
 <main>
@@ -32,9 +55,11 @@
 
 	<ul>
 		{#each filteredBrands as brand (brand.id)}
-			<li>{brand.name}</li>
+			<li onmouseenter={() => show(brand)} onmouseleave={hide}>{brand.name}</li>
 		{/each}
 	</ul>
+
+	<img bind:this={img} {src} alt="" style="left: {x}vw; top: {y}vh;" />
 </main>
 
 <style lang="scss">
@@ -85,9 +110,21 @@
 		font-size: 60rem;
 		line-height: 1;
 		text-transform: capitalize;
+		cursor: pointer;
 		@media (width < 770px) {
 			font-size: 30rem;
 			line-height: 1.2;
 		}
+	}
+	img {
+		position: fixed;
+		width: 320rem;
+		aspect-ratio: 1;
+		height: auto;
+		pointer-events: none; /* never blocks the hover on the list */
+		z-index: 10;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
 	}
 </style>

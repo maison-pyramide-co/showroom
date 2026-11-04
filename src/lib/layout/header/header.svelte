@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { onMount } from 'svelte';
+	import animation from './_a';
 	import Menu from './menu.svelte';
 
 	let menuOpened = $state(false);
@@ -7,9 +9,12 @@
 	$effect(() => {
 		if (page.url.pathname) menuOpened = false;
 	});
+	onMount(() => {
+		animation();
+	});
 </script>
 
-<header id="h">
+<header id="h"  style:opacity="0">
 	<div class="l d-o">
 		<a href="/brands">brands</a>
 		<a href="/services">services</a>

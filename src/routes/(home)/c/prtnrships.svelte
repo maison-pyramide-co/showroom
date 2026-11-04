@@ -34,11 +34,11 @@
 	});
 </script>
 
-<section>
-	<h2>PARTNERSHIPS</h2>
+<section id="s-prtnrships">
+	<h2 data-ga="tr">PARTNERSHIPS</h2>
 
 	<div class="h">
-		<h3>FASHION TRUST ARABIA</h3>
+		<h3 data-ga="tr">FASHION TRUST ARABIA</h3>
 		<a href="/partnerships" class="d-o">VIEW ALL PARTNERSHIPS</a>
 	</div>
 	<div class="swiper_">
