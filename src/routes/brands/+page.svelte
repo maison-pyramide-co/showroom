@@ -1,7 +1,9 @@
 <script lang="ts">
 	import LogoB from '$lib/assets/icons/logo-b.svelte';
-	import brands from '$lib/data/brands';
+	import brands, { slugify } from '$lib/data/brands';
 	import gsap from 'gsap';
+	import { onMount } from 'svelte';
+
 	const categories = ['all', 'rtw', 'jwl', 'ftw / acc'];
 	let activeCategory = $state('all');
 
@@ -18,17 +20,13 @@
 
 	let img: HTMLImageElement;
 	let src = $state('');
-	let x = $state(50);
-	let y = $state(50);
 
 	const show = (brand: { image: string }) => {
 		src = brand.image;
-		x = gsap.utils.random(20, 80); // vw, keeps the image away from the edges
-		y = gsap.utils.random(25, 75); // vh
 
 		gsap.fromTo(
 			img,
-			{ autoAlpha: 0, scale: 0.9, xPercent: -50, yPercent: -50 },
+			{ autoAlpha: 0, scale: 0.9 },
 			{ autoAlpha: 1, scale: 1, duration: 0.4, ease: 'power3.out', overwrite: true }
 		);
 	};
@@ -37,9 +35,14 @@
 		gsap.to(img, { autoAlpha: 0, duration: 0.3, ease: 'power2.out', overwrite: true });
 	};
 
+	let page: HTMLElement;
+
+	onMount(() => {
+		// return animation(page);
+	});
 </script>
 
-<main>
+<main id="p" style:opacity="0" bind:this={page}>
 	<a href="/">
 		<LogoB />
 	</a>
@@ -55,11 +58,15 @@
 
 	<ul>
 		{#each filteredBrands as brand (brand.id)}
-			<li onmouseenter={() => show(brand)} onmouseleave={hide}>{brand.name}</li>
+			<li onmouseenter={() => show(brand)} onmouseleave={hide}>
+				<a href={`/brands/${slugify(brand.name)}`}>
+					{brand.name}
+				</a>
+			</li>
 		{/each}
 	</ul>
 
-	<img bind:this={img} {src} alt="" style="left: {x}vw; top: {y}vh;" />
+	<img bind:this={img} {src} alt="" />
 </main>
 
 <style lang="scss">
@@ -118,6 +125,8 @@
 	}
 	img {
 		position: fixed;
+		top: 370rem;
+		left: 70rem;
 		width: 320rem;
 		aspect-ratio: 1;
 		height: auto;

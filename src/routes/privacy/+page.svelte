@@ -7,9 +7,9 @@
 		<LogoB />
 	</a>
 
-	<h1>Privacy Policy</h1>
+	<h1>PRIVACY POLICY</h1>
 	<p>
-		PREFACE.
+		PREFACE
 		<br />
 		<br />
 		The present General Privacy Policy (hereinafter the “Privacy Policy”) is that of the Maison Pyramide’s
@@ -28,16 +28,15 @@
 		best protection for Your Personal Information. We highly cares about Your privacy and data protection
 		and takes Your data protection rights and our legal obligations seriously. This Privacy Policy describes
 		the policies and procedures adopted by Us on the collection, use and disclosure of the information
-		of Professional Brand (s) and Professional Buyer Retailer (s) on www.eshowroom.maisonpyramide.com
-		(the "Website"), as required by the applicable data protection laws and regulations including without
-		limitation the European Union General Data Protection Regulation (Regulation 2016/679 - “GDPR”) and
-		where applicable the Lebanese laws including Law No. 81 dated 10/10/2018 governing electronic transactions
-		and personal data (“Law 81/2018”), and the Egyptian laws including law No. 175 dated 14/08/2018 governing
-		Cyber and Information Technology Crimes (“ Cybersecurity Law”). Thus, we have implemented a robust
-		data protection compliance program, which includes the adoption of the high-standard data protection
-		principles of the GDPR at a global level, such as infer alia the adoption of internal policies and
-		procedures to ensure compliance with applicable data protection laws and regulations; and implementation
-		of appropriate
+		of Professional Brand (s) and Professional Buyer Retailer (s) on showroom.maisonpyramide.com (the
+		"Website"), as required by the applicable data protection laws and regulations including without limitation
+		the European Union General Data Protection Regulation (Regulation 2016/679 - “GDPR”) and where applicable
+		the Lebanese laws including Law No. 81 dated 10/10/2018 governing electronic transactions and personal
+		data (“Law 81/2018”), and the Egyptian laws including law No. 175 dated 14/08/2018 governing Cyber
+		and Information Technology Crimes (“ Cybersecurity Law”). Thus, we have implemented a robust data
+		protection compliance program, which includes the adoption of the high-standard data protection principles
+		of the GDPR at a global level, such as infer alia the adoption of internal policies and procedures
+		to ensure compliance with applicable data protection laws and regulations; and implementation of appropriate
 	</p>
 </main>
 

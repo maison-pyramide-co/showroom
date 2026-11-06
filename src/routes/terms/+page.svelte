@@ -7,7 +7,7 @@
 		<LogoB />
 	</a>
 
-	<h1>TERMS OF USE.</h1>
+	<h1>TERMS OF USE</h1>
 	<p>
 		The present General Terms of Use (hereinafter the “Terms of Use”) are those of the Maison
 		Pyramide’s Group of companies (the “Group”) consisting of the legal entities forming the group
@@ -20,11 +20,11 @@
 		<br />
 		<br />
 
-		GENERAL.
+		<strong>GENERAL</strong>
 		<br />
 		<br />
 
-		On the Group’s website www.eshowroom.maisonpyramide.com (the “Website”), professional buyers
+		On the Group’s website showroom.maisonpyramide.com (the “Website”), professional buyers
 		retailers (hereinafter the “Professional Buyer Retailer (s)”) and professional brands
 		(hereinafter the “Professional Brand (s)”) are offered a unique and global access fo a unique
 		electronic showroom experience during major world fashion-weeks, as well as to an online
@@ -45,11 +45,11 @@
 
 		<br />
 		<br />
-		<span class="red">
-			THESE TERMS OF USE INCLUDE OUR PRIVACY POLICY WHICH IS INCORPORATED AND MADE A PART OF THESE
-			TERMS OF USE. BY ACCESSING OR USING OUR WEBSITE, YOU AGREE TO BE BOUND BY THESE TERMS,
-			INCLUDING OUR PRIVACY POLICY.
-		</span>
+		<!-- <span class="red"> -->
+		THESE TERMS OF USE INCLUDE OUR PRIVACY POLICY WHICH IS INCORPORATED AND MADE A PART OF THESE TERMS
+		OF USE. BY ACCESSING OR USING OUR WEBSITE, YOU AGREE TO BE BOUND BY THESE TERMS, INCLUDING OUR PRIVACY
+		POLICY.
+		<!-- </span> -->
 	</p>
 </main>
 

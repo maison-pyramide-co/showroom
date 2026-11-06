@@ -5,7 +5,7 @@ export const load = ({ params }) => {
 	const brand = getBrand(params.slug);
 	// if (!brand) error(404, 'Brand not found');
 	if (!brand) return;
-	return { brand, related: getRelatedBrands(brand) };
+	return { brand, related: getRelatedBrands(brand,6) };
 };
 
 // optional: only if you use adapter-static / want these prerendered

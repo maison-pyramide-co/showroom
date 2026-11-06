@@ -35,7 +35,7 @@ export type Brand = {
 const raw: Brand[] = [
 	{
 		id: 1,
-		name: 'menghi',
+		name: 'Menghi',
 		category: ['ftw/acc'],
 		joorLink: '',
 		image: menghi,
@@ -72,7 +72,7 @@ const raw: Brand[] = [
 	},
 	{
 		id: 5,
-		name: 'PEDRO GARCIA',
+		name: 'Pedro Garcia',
 		category: ['ftw/acc'],
 		image: pedro,
 		joorLink: '',
@@ -107,7 +107,7 @@ const raw: Brand[] = [
 	},
 	{
 		id: 9,
-		name: 'ROKSANDA',
+		name: 'Roksanda',
 		image: roksanda,
 		category: ['rtw'],
 		joorLink: '',
@@ -116,7 +116,7 @@ const raw: Brand[] = [
 	},
 	{
 		id: 10,
-		name: 'MANTU',
+		name: 'Mantu',
 		image: mantu,
 		category: ['rtw'],
 		joorLink: '',
@@ -125,7 +125,7 @@ const raw: Brand[] = [
 	},
 	{
 		id: 11,
-		name: 'VIVETTA',
+		name: 'Vivetta',
 		image: vivetta,
 		category: ['rtw'],
 		joorLink: '',
@@ -134,7 +134,7 @@ const raw: Brand[] = [
 	},
 	{
 		id: 12,
-		name: 'ILIO SMERALDO',
+		name: 'Ilio Smeraldo',
 		image: ilio,
 		category: ['ftw/acc'],
 		joorLink: '',
@@ -171,7 +171,7 @@ const raw: Brand[] = [
 	},
 	{
 		id: 17,
-		name: 'K salamoon',
+		name: 'K Salamoon',
 		image: salamoon,
 		category: ['jwl'],
 		joorLink: '',

@@ -1,8 +1,12 @@
 <script lang="ts">
+	// import { onMount } from 'svelte';
 	import LogoB from '$lib/assets/icons/logo-b.svelte';
+	import animation from './_a.ts';
 
 	let { data } = $props();
-	const brand = $derived(data.brand);
+	let page: HTMLElement;
+
+	const brand = $derived(data.brand)!;
 	const related = $derived(data.related);
 
 	const labels: Record<string, string> = {
@@ -12,6 +16,17 @@
 	};
 
 	const categoryLabel = $derived(brand.category.map((c) => labels[c] ?? c).join(' · '));
+
+		$effect(() => {
+		data.brand?.slug; // read it so the effect re-runs when the brand changes
+
+		// resetScroll();
+		return animation(page); // cleanup (ctx.revert) runs before each re-run
+	});
+
+	// onMount(() => {
+	// 	return animation(page);
+	// });
 </script>
 
 <svelte:head>
@@ -19,23 +34,24 @@
 	<meta name="description" content={brand.description} />
 </svelte:head>
 
-<main id="page">
+<main id="p" style:opacity="0" bind:this={page}>
 	<a href="/" class="logo">
 		<LogoB />
 	</a>
 
-	<h1>{brand.name}</h1>
-	<figure>
+	<h1 class="brand_name">{brand.name}</h1>
+	<figure class="brand_image">
 		<img src={brand.image} alt="" />
 	</figure>
 
-	<p>{brand.description}</p>
+	<p class="brand_desc">{brand.description}</p>
 
 	<h3>EXPLORE {categoryLabel} BRANDS</h3>
 	<ul>
-		{#each related as item (item.id)}
+		{#each related as item, i (item.id)}
 			<li>
 				<a href="/brands/{item.slug}">{item.name}</a>
+				{#if i < related.length - 1}<span>,</span>{/if}
 			</li>
 		{/each}
 	</ul>
@@ -82,9 +98,19 @@
 		display: flex;
 		width: 700rem;
 		margin-inline: auto;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 	li {
 		font-size: 40rem;
 		line-height: 1;
+		display: flex;
+		opacity: 0.7;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	span {
+		padding-right: 8rem;
 	}
 </style>

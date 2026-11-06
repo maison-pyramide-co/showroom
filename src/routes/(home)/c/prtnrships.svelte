@@ -9,7 +9,7 @@
 		'Mentoring of Prize Winners',
 		'Wholesale representation'
 	];
-	let index = 0;
+	let index = $state(0);
 
 	onMount(() => {
 		const swiper = new Swiper('.swiper', {
@@ -17,7 +17,8 @@
 			spaceBetween: '0',
 			loop: true,
 			navigation: {
-				nextEl: '.swiper_ button'
+				nextEl: '.swiper_ .next-btn',
+				prevEl: '.swiper_ .prev-btn'
 			},
 			pagination: {
 				el: '.s-imp .pg',
@@ -29,7 +30,7 @@
 		});
 
 		swiper.on('slideChange', () => {
-			index = this.realIndex;
+			index = swiper.realIndex;
 		});
 	});
 </script>
@@ -38,7 +39,7 @@
 	<h2 data-ga="tr">PARTNERSHIPS</h2>
 
 	<div class="h">
-		<h3 data-ga="tr">FASHION TRUST ARABIA</h3>
+		<h3 data-ga="tr">{partnerships[index].name}</h3>
 		<a href="/partnerships" class="d-o">VIEW ALL PARTNERSHIPS</a>
 	</div>
 	<div class="swiper_">
@@ -68,10 +69,10 @@
 			</div>
 		</div>
 		<nav>
-			<button class="m-o">
+			<button class="prev-btn m-o">
 				<ChevB />
 			</button>
-			<button>
+			<button class="next-btn">
 				<ChevB />
 			</button>
 		</nav>
