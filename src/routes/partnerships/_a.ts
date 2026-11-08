@@ -1,4 +1,4 @@
-import { textsA } from '$lib/utils/animation';
+import { imagesA, textsA } from '$lib/utils/animation';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { SplitText } from 'gsap/dist/SplitText';
@@ -32,6 +32,7 @@ const animation = (page: HTMLElement) => {
 			}
 			const q = gsap.utils.selector(page);
 			textsA();
+			imagesA();
 		}, page);
 	});
 

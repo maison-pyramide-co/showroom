@@ -12,23 +12,23 @@
 </script>
 
 <main id="p" style:opacity="0" bind:this={page}>
-	<a href="/" class="logo">
+	<a href="/" class="logo" data-ga="ir">
 		<LogoB />
 	</a>
-	<h1>CONNECTING TALENT, MARKETS<br />AND GLOBAL OPPORTUNITY.</h1>
+	<h1 data-ga="tr">CONNECTING TALENT, MARKETS<br />AND GLOBAL OPPORTUNITY.</h1>
 	<ul>
 		{#each partnerships as prt}
 			<li>
 				<div>
-					<span>{prt.client}</span>
-					<figure style:width={`${prt.width}px`}>
+					<span data-ga="tr">{prt.client}</span>
+					<figure style:width={`${prt.width}px`} data-ga="ir">
 						<img src={prt.image} alt="" />
 					</figure>
-					<span>{prt.country}</span>
+					<span data-ga="tr">{prt.country}</span>
 				</div>
 
-				<h3>{prt.name}</h3>
-				<p>{prt.description}</p>
+				<h3 data-ga="tr">{prt.name}</h3>
+				<p data-ga="tr">{prt.description}</p>
 			</li>
 		{/each}
 	</ul>

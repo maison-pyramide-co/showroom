@@ -42,7 +42,8 @@
 	});
 </script>
 
-<main id="p" style:opacity="0" bind:this={page}>
+<!-- <main id="p" style:opacity="0" bind:this={page}> -->
+<main id="p">
 	<a href="/">
 		<LogoB />
 	</a>
