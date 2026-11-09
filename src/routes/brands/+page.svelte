@@ -20,10 +20,18 @@
 
 	let img: HTMLImageElement;
 	let src = $state('');
+	let token = 0;
 
-	const show = (brand: { image: string }) => {
+	const show = async (brand: { image: string }) => {
+		const my = ++token;
+		const i = new Image();
+		i.src = brand.image;
+		try {
+			await i.decode();
+		} catch {}
+		if (my !== token) return; // a newer hover or a hide happened
+
 		src = brand.image;
-
 		gsap.fromTo(
 			img,
 			{ autoAlpha: 0, scale: 0.9 },
@@ -32,6 +40,7 @@
 	};
 
 	const hide = () => {
+		token++; // cancels any pending show
 		gsap.to(img, { autoAlpha: 0, duration: 0.3, ease: 'power2.out', overwrite: true });
 	};
 
@@ -39,6 +48,11 @@
 
 	onMount(() => {
 		// return animation(page);
+		brands.forEach((b) => {
+			const i = new Image();
+			i.src = b.image;
+			i.decode?.().catch(() => {}); // decode ahead of time, ignore errors
+		});
 	});
 </script>
 

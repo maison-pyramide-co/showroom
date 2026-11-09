@@ -20,7 +20,6 @@
 	$effect(() => {
 		data.brand?.slug; // read it so the effect re-runs when the brand changes
 
-		// resetScroll();
 		return animation(page); // cleanup (ctx.revert) runs before each re-run
 	});
 
