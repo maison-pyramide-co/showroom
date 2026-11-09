@@ -6,8 +6,8 @@
 	import Footer from '$lib/layout/footer/footer.svelte';
 
 	let { children } = $props();
-	import { page } from '$app/state';
-	import { tick } from 'svelte';
+	// import { page } from '$app/state';
+	// import { tick } from 'svelte';
 	// import gsap from 'gsap';
 	// import { ScrollTrigger } from 'gsap/all';
 
@@ -16,8 +16,8 @@
 
 	// gsap.registerPlugin(ScrollTrigger);
 
-	const isHome = $derived(page.url.pathname === '/');
-	const setBlend = (on: boolean) => gsap.set('#h', { mixBlendMode: on ? 'difference' : 'normal' });
+	// const isHome = $derived(page.url.pathname === '/');
+	// const setBlend = (on: boolean) => gsap.set('#h', { mixBlendMode: on ? 'difference' : 'normal' });
 
 	/*
 	$effect(() => {
