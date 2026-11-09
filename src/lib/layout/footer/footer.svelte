@@ -43,7 +43,7 @@
 			{/if}
 		</div>
 		<div class="r">
-			<a href="/">INSTAGRAM</a>
+			<a href="https://www.instagram.com/maisonpyramideshowroom/">INSTAGRAM</a>
 			<a href="mailto:showroom@maisonpyramide.com">SHOWROOM@MAISONPYRAMIDE.COM</a>
 		</div>
 	</div>

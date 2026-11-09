@@ -1,4 +1,6 @@
 <script lang="ts">
+	import LogoB from '$lib/assets/icons/logo-b.svelte';
+
 	const menu = [
 		{
 			title: 'brands',
@@ -29,6 +31,13 @@
 			</a>
 		{/each}
 	</nav>
+	<div class="b">
+		<LogoB />
+		<div>
+			<a href="https://www.instagram.com/maisonpyramideshowroom/">INSTAGRAM</a>
+			<a href="mailto:showroom@maisonpyramide.com">SHOWROOM@MAISONPYRAMIDE.COM</a>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
@@ -48,7 +57,9 @@
 		height: 100dvh;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		gap: 80rem;
+		padding-bottom: 40rem;
 	}
 	/* MENU NAV */
 	nav {
@@ -58,11 +69,31 @@
 		gap: 20rem;
 	}
 
-	a {
+	nav a {
 		font-size: 30rem;
 		line-height: 1;
 		letter-spacing: 10%;
-		font-weight: 500;
+		font-weight: 600;
 		text-transform: uppercase;
+	}
+	.b {
+		padding-inline: var(--p-i);
+		position: absolute;
+		bottom: 40rem;
+		left: 0;
+	}
+	.b div {
+		margin-top: 16rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 12rem;
+	}
+
+	.b a:first-child {
+		font-weight: 450;
+	}
+	.b a:last-child {
+		font-weight: 300;
 	}
 </style>
