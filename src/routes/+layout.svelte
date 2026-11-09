@@ -8,11 +8,14 @@
 	let { children } = $props();
 	import { page } from '$app/state';
 	import { tick } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/all';
 
-	import { gsap } from 'gsap/dist/gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	// import { gsap } from 'gsap/dist/gsap';
+	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 	gsap.registerPlugin(ScrollTrigger);
+
 	const isHome = $derived(page.url.pathname === '/');
 	const setBlend = (on: boolean) => gsap.set('#h', { mixBlendMode: on ? 'difference' : 'normal' });
 

@@ -3,7 +3,9 @@ import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { SplitText } from 'gsap/dist/SplitText';
 
+
 gsap.registerPlugin(ScrollTrigger, SplitText);
+
 
 const heroA = (q: gsap.utils.SelectorFunc) => {
 	const logo = q('#s-hero .logo')[0];
@@ -34,6 +36,7 @@ const heroA = (q: gsap.utils.SelectorFunc) => {
 	return tl;
 };
 
+
 const brandsA = () => {
 	const $imgs = gsap.utils.toArray('#s-brands img');
 
@@ -50,33 +53,6 @@ const brandsA = () => {
 
 };
 
-/*
-const prtnrshipsA = (q: gsap.utils.SelectorFunc) => {
-	const texts = [q('#s-prtnrships h2'), q('#s-prtnrships h2')];
-
-	const splits = texts.map((el) => SplitText.create(el, { type: 'lines', mask: 'lines' }));
-	console.log('ss', splits);
-
-	const tl = gsap.timeline();
-
-	splits.forEach((split, i) => {
-		tl.from(
-			split.lines,
-			{
-				yPercent: 100,
-				duration: 0.8,
-				ease: 'power4.out',
-				onComplete: () => {
-					split.masks.forEach((m: HTMLElement) => (m.style.overflow = ''));
-				}
-			},
-			i === 0 ? '>-0.3' : '>-0.6'
-		);
-	});
-
-	return tl;
-};
-*/
 
 const animation = (page: HTMLElement) => {
 	let ctx: gsap.Context | null = null;
