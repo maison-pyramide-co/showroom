@@ -8,7 +8,8 @@
 	let { children } = $props();
 	import { page } from '$app/state';
 	import { tick } from 'svelte';
-	import gsap from 'gsap';
+
+	import { gsap } from 'gsap/dist/gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 	gsap.registerPlugin(ScrollTrigger);
