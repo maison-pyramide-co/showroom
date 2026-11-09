@@ -101,6 +101,7 @@
 
 		@media (width < 770px) {
 			padding-right: 0;
+			justify-content: center;
 		}
 	}
 	.h h3 {
