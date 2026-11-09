@@ -31,9 +31,9 @@
 
 		gsap
 			.timeline()
-			.to(el, { autoAlpha: 0, duration: 0.4, ease: 'power2.out' })
+			.to(el, { autoAlpha: 0, duration: 0.2, ease: 'power2.out' })
 			.add(() => (shown[i] = src))
-			.to(el, { autoAlpha: 1, duration: 0.4, ease: 'power2.out' });
+			.to(el, { autoAlpha: 1, duration: 0.4, ease: 'power3.out' });
 	};
 
 	onMount(() => {

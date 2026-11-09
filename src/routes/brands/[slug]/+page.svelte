@@ -17,7 +17,7 @@
 
 	const categoryLabel = $derived(brand.category.map((c) => labels[c] ?? c).join(' · '));
 
-		$effect(() => {
+	$effect(() => {
 		data.brand?.slug; // read it so the effect re-runs when the brand changes
 
 		// resetScroll();
@@ -61,6 +61,9 @@
 	main {
 		padding-top: 80rem;
 		padding-bottom: 120rem;
+		@media (width < 770px) {
+			padding-inline: var(--p-i);
+		}
 	}
 	.logo {
 		display: block;
@@ -72,12 +75,20 @@
 		font-size: 30rem;
 		text-transform: uppercase;
 		font-weight: 600;
+		@media (width < 770px) {
+			margin-top: 64rem;
+		}
 	}
 	figure {
 		margin-top: 64rem;
 		margin-inline: auto;
 		aspect-ratio: 5/5.5;
 		width: 350rem;
+		@media (width < 770px) {
+			width: 290rem;
+			margin-top: 40rem;
+			width: 290rem;
+		}
 	}
 	p {
 		width: 500rem;
@@ -86,12 +97,18 @@
 		font-weight: 450;
 		text-align: center;
 		margin-top: 24rem;
+		@media (width < 770px) {
+			width: 290rem;
+		}
 	}
 	h3 {
 		margin-top: 120rem;
 		text-transform: uppercase;
 		text-align: center;
 		font-weight: 500;
+		@media (width < 770px) {
+			margin-top: 80rem;
+		}
 	}
 	ul {
 		margin-top: 64rem;
@@ -100,6 +117,9 @@
 		margin-inline: auto;
 		flex-wrap: wrap;
 		justify-content: center;
+		@media (width < 770px) {
+			width: 100%;
+		}
 	}
 	li {
 		font-size: 40rem;
@@ -108,6 +128,9 @@
 		opacity: 0.7;
 		&:hover {
 			opacity: 1;
+		}
+		@media (width < 770px) {
+			font-size: 24rem;
 		}
 	}
 	span {
