@@ -59,7 +59,7 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 80rem;
-		padding-bottom: 40rem;
+		padding-bottom: 80rem;
 	}
 	/* MENU NAV */
 	nav {
