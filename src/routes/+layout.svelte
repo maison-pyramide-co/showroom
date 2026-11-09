@@ -30,7 +30,6 @@
 			requestAnimationFrame(() => {
 				const hero = document.querySelector('#s-hero');
 				if (cancelled || !hero) return;
-
 				st = ScrollTrigger.create({
 					trigger: hero,
 					start: 'bottom top+=60',
