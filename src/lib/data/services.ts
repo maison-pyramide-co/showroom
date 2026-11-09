@@ -32,37 +32,51 @@ const services = [
 	{
 		id: '05',
 		name: 'Buyer relations & order management',
-		image: srvc1
+		image: srvc1,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor enim incididunt ut labore et amet dolore magna aliqua. Ut enim ad minim veniam, quis.'
 	},
 	{
 		id: '06',
 		name: 'Back-office & logistics coordination',
-		image: srvc1
+		image: srvc1,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor enim incididunt ut labore et amet dolore magna aliqua. Ut enim ad minim veniam, quis.'
 	},
 	{
 		id: '07',
 		name: 'MENA distribution access & management',
-		image: srvc1
+		image: srvc1,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor enim incididunt ut labore et amet dolore magna aliqua. Ut enim ad minim veniam, quis.'
 	},
 	{
 		id: '08',
 		name: 'Production financing against confirmed orders',
-		image: srvc1
+		image: srvc1,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor enim incididunt ut labore et amet dolore magna aliqua. Ut enim ad minim veniam, quis.'
 	},
 	{
 		id: '09',
 		name: 'Fashion week operations & creative direction',
-		image: srvc1
+		image: srvc1,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor enim incididunt ut labore et amet dolore magna aliqua. Ut enim ad minim veniam, quis.'
 	},
 	{
 		id: '10',
 		name: 'Global industry engagement & access',
-		image: srvc1
+		image: srvc1,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor enim incididunt ut labore et amet dolore magna aliqua. Ut enim ad minim veniam, quis.'
 	},
 	{
 		id: '11',
 		name: 'Jury, selection & awards program support',
-		image: srvc1
+		image: srvc1,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor enim incididunt ut labore et amet dolore magna aliqua. Ut enim ad minim veniam, quis.'
 	}
 ];
 

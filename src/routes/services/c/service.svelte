@@ -76,6 +76,7 @@
 		@media (width < 770px) {
 			padding-left: 50rem;
 			padding-block: 24rem 40rem;
+			flex-direction: column;
 			gap: 16rem;
 		}
 	}
@@ -83,7 +84,7 @@
 		flex-shrink: 0;
 		width: 530rem;
 		@media (width < 770px) {
-			width: 180rem;
+			width: 100%;
 		}
 	}
 	.acc_b p {

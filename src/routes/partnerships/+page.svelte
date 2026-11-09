@@ -82,13 +82,13 @@
 		width: 750rem;
 		margin-top: 8rem;
 		font-size: 30rem;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		text-align: center;
 		margin-inline: auto;
 		line-height: 1;
 		@media (width < 770px) {
-			width: 285rem;
-			font-size: 15rem;
+			width: 300rem;
+			font-size: 13rem;
 		}
 	}
 	span {
