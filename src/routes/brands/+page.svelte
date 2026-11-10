@@ -18,8 +18,9 @@
 			: brands
 	);
 
-	let img: HTMLImageElement;
-	let src = $state('');
+	let imgs: HTMLImageElement[] = [];
+	let srcs = $state(['', '']);
+	let next = 0; // which slot gets the next hover
 	let token = 0;
 
 	const show = async (brand: { image: string }) => {
@@ -29,11 +30,17 @@
 		try {
 			await i.decode();
 		} catch {}
-		if (my !== token) return; // a newer hover or a hide happened
+		if (my !== token) return;
 
-		src = brand.image;
+		const slot = next;
+		next = (next + 1) % 2;
+
+		// the other slot fades out so only one image shows at a time
+		gsap.to(imgs[1 - slot], { autoAlpha: 0, duration: 0.3, ease: 'power2.out', overwrite: true });
+
+		srcs[slot] = brand.image;
 		gsap.fromTo(
-			img,
+			imgs[slot],
 			{ autoAlpha: 0, scale: 0.9 },
 			{ autoAlpha: 1, scale: 1, duration: 0.4, ease: 'power3.out', overwrite: true }
 		);
@@ -41,10 +48,10 @@
 
 	const hide = () => {
 		token++; // cancels any pending show
-		gsap.to(img, { autoAlpha: 0, duration: 0.3, ease: 'power2.out', overwrite: true });
+		gsap.to(imgs, { autoAlpha: 0, duration: 0.3, ease: 'power2.out', overwrite: true });
 	};
 
-	let page: HTMLElement;
+	// let page: HTMLElement;
 
 	onMount(() => {
 		// return animation(page);
@@ -81,7 +88,8 @@
 		{/each}
 	</ul>
 
-	<img bind:this={img} {src} alt="" />
+	<img class="img0" bind:this={imgs[0]} src={srcs[0]} alt="" />
+	<img class="img1" bind:this={imgs[1]} src={srcs[1]} alt="" />
 </main>
 
 <style lang="scss">
@@ -140,8 +148,6 @@
 	}
 	img {
 		position: fixed;
-		top: 370rem;
-		left: 70rem;
 		width: 320rem;
 		aspect-ratio: 1;
 		height: auto;
@@ -150,5 +156,13 @@
 		opacity: 0;
 		visibility: hidden;
 		z-index: -1;
+	}
+	.img0 {
+		top: 370rem;
+		left: 70rem;
+	}
+	.img1 {
+		top: 500rem;
+		right: 80rem;
 	}
 </style>

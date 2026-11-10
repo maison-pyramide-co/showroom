@@ -21,7 +21,8 @@
 			<li>
 				<div>
 					<span data-ga="tr">{prt.client}</span>
-					<figure style:width={`${prt.width}px`} data-ga="ir">
+					<!-- <figure style:width={`${prt.width}px`} data-ga="ir"> -->
+					<figure data-ga="ir">
 						<img src={prt.image} alt="" />
 					</figure>
 					<span data-ga="tr">{prt.country}</span>
@@ -62,12 +63,16 @@
 		}
 	}
 	li {
-		margin-top: 40rem;
+		margin-top: 80rem;
 	}
 	li div {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	figure {
+		width: 400rem;
+		aspect-ratio: 4/5;
 	}
 	h3 {
 		margin-top: 8rem;
@@ -81,7 +86,7 @@
 	p {
 		width: 750rem;
 		margin-top: 8rem;
-		font-size: 30rem;
+		font-size: 25rem;
 		/* text-transform: uppercase; */
 		text-align: center;
 		margin-inline: auto;

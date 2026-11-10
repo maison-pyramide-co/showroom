@@ -3,9 +3,7 @@ import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { SplitText } from 'gsap/dist/SplitText';
 
-
 gsap.registerPlugin(ScrollTrigger, SplitText);
-
 
 const heroA = (q: gsap.utils.SelectorFunc) => {
 	const logo = q('#s-hero .logo')[0];
@@ -36,10 +34,9 @@ const heroA = (q: gsap.utils.SelectorFunc) => {
 	return tl;
 };
 
-
+/*
 const brandsA = () => {
 	const $imgs = gsap.utils.toArray('#s-brands img');
-
 	gsap.from($imgs, {
 		autoAlpha: 0,
 		duration: 1,
@@ -50,9 +47,8 @@ const brandsA = () => {
 			start: 'top 90%'
 		}
 	});
-
 };
-
+*/
 
 const animation = (page: HTMLElement) => {
 	let ctx: gsap.Context | null = null;
@@ -80,7 +76,7 @@ const animation = (page: HTMLElement) => {
 				//
 			}
 			heroA(gsap.utils.selector(page));
-			brandsA();
+			// brandsA();
 			textsA();
 			// prtnrshipsA(gsap.utils.selector(page));
 			// introA();
