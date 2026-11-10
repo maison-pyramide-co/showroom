@@ -1,7 +1,8 @@
-import p1 from '$lib/assets/images/partnerships/p1.png';
-import p2 from '$lib/assets/images/partnerships/p2.png';
-import p3 from '$lib/assets/images/partnerships/p3.png';
+import p1 from '$lib/assets/images/partnerships/p1.webp';
+import p2 from '$lib/assets/images/partnerships/p2.webp';
+import p3 from '$lib/assets/images/partnerships/p3.webp';
 import p4 from '$lib/assets/images/partnerships/p4.png';
+import p5 from '$lib/assets/images/partnerships/p5.webp';
 
 const partnerships = [
 	{
@@ -51,7 +52,7 @@ const partnerships = [
 			'Maison Pyramide led press, showroom, sales and talent management for Riyadh Fashion Week, connecting designers with buyers, media and global talent while amplifying RFW’s presence across the region and beyond.',
 		client: 'SAUDI FASHION COMMISSION',
 		country: 'PARIS',
-		image: p4,
+		image: p5,
 		width: 400
 	}
 ];

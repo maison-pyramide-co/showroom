@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Logo from '$lib/assets/icons/logo-w.svelte';
-	import banI from '$lib/assets/images/home/ban.png';
+	import banI from '$lib/assets/images/home/ban2.webp';
 	import banMI from '$lib/assets/images/home/ban-m.png';
 </script>
 
-<section id='s-hero'>
+<section id="s-hero">
 	<picture>
 		<source srcset={banI} media="(min-width: 770px)" />
 		<img src={banMI} width="auto" height="auto" alt="logo" />

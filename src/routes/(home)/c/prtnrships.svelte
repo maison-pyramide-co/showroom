@@ -169,14 +169,17 @@
 		margin-top: 16rem;
 	}
 	.swiper {
-		width: 690rem;
+		/* width: 690rem; */
+		width: 500rem;
 		@media (width < 770px) {
 			width: 100%;
 		}
 	}
 	figure {
-		width: 690rem;
-		aspect-ratio: 4/3;
+		/* width: 690rem; */
+		/* aspect-ratio: 4/3; */
+		aspect-ratio: 4/5;
+		width: 500rem;
 		@media (width < 770px) {
 			width: 100%;
 		}
