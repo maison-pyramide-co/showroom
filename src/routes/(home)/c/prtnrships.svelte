@@ -39,7 +39,7 @@
 	<h2 data-ga="tr">PARTNERSHIPS</h2>
 
 	<div class="h">
-		<h3 data-ga="tr">{partnerships[index].name}</h3>
+		<h3>{partnerships[index].name}</h3>
 		<a href="/partnerships" class="d-o">VIEW ALL PARTNERSHIPS</a>
 	</div>
 	<div class="swiper_">
