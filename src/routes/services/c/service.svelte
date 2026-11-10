@@ -91,7 +91,7 @@
 		font-size: 15rem;
 		line-height: 1;
 		font-weight: 450;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		@media (width < 770px) {
 			font-size: 12rem;
 		}
