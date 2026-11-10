@@ -68,8 +68,6 @@
 		@media (width < 770px) {
 			order: 3;
 			flex-direction: column;
-			/* max-width: 300rem; */
-			/* margin-inline: auto; */
 		}
 	}
 
@@ -111,7 +109,7 @@
 		justify-content: space-between;
 
 		@media (width < 770px) {
-			flex-direction: column;
+			flex-direction: column-reverse;
 			align-items: center;
 			gap: 20rem;
 		}

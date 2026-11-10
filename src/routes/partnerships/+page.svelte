@@ -97,7 +97,7 @@
 		text-transform: uppercase;
 		@media (width < 770px) {
 			width: 90rem;
-			font-size: 8rem;
+			font-size: 10rem;
 		}
 	}
 	span:last-child {
