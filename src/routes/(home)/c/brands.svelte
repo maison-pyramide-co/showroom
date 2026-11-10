@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { brands } from '$lib/data/brands'; // whatever you export from that file
 	import { onMount } from 'svelte';
-	import gsap from 'gsap';
+	import { gsap } from 'gsap/dist/gsap';
 
 	const images = brands.map((b) => b.image).filter(Boolean);
 
