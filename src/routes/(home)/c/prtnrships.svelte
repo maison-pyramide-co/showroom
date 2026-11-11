@@ -4,11 +4,6 @@
 	import 'swiper/css';
 	import partnerships from '$lib/data/partnerships';
 	import ChevB from '$lib/assets/icons/chev-b.svelte';
-	const srvs = [
-		'Feedback on applicants and selection of winners',
-		'Mentoring of Prize Winners',
-		'Wholesale representation'
-	];
 	let index = $state(0);
 
 	onMount(() => {
@@ -45,12 +40,12 @@
 	<div class="swiper_">
 		<div class="services">
 			<h3>SERVICES</h3>
-			<p class="m-o">{srvs.join(' // ')}</p>
+			<p class="m-o">{partnerships[index].services.join(' // ')}</p>
 			<ul class="d-o">
-				{#each srvs as srv, i}
+				{#each partnerships[index].services as srv, i}
 					<li>
 						{srv}
-						{#if i < srvs.length - 1}
+						{#if i < partnerships[index].services.length - 1}
 							<span>//</span>
 						{/if}
 					</li>
@@ -128,7 +123,7 @@
 		}
 	}
 	.services {
-		width: 220rem;
+		width: 350rem;
 		position: absolute;
 		left: 56rem;
 		top: 50%;

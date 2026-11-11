@@ -38,12 +38,16 @@
 		<LogoB />
 	</a>
 
-	<h1 class="brand_name">{brand.name}</h1>
+	{#key brand.slug}
+		<h1 class="brand_name">{brand.name}</h1>
+	{/key}
 	<figure class="brand_image">
 		<img src={brand.image} alt="" />
 	</figure>
 
-	<p class="brand_desc">{brand.description}</p>
+	{#key brand.slug}
+		<p class="brand_desc">{brand.description}</p>
+	{/key}
 
 	<h3>EXPLORE {categoryLabel} BRANDS</h3>
 	<ul>

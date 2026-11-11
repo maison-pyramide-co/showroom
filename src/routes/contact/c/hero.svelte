@@ -4,9 +4,9 @@
 </script>
 
 <section>
-	<div class="logo">
+	<a href="/" class="logo">
 		<LogoW />
-	</div>
+	</a>
 	<figure>
 		<img src={banI} alt="" />
 	</figure>
@@ -41,6 +41,7 @@
 
 	h2 {
 		position: absolute;
+		left: 0;
 		bottom: 80rem;
 		font-size: 200rem;
 		text-align: center;
