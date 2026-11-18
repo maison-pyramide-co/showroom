@@ -141,10 +141,14 @@
 		line-height: 1;
 		text-transform: capitalize;
 		cursor: pointer;
+		opacity: 70%;
 		@media (width < 770px) {
 			font-size: 30rem;
 			line-height: 1.2;
 		}
+	}
+	li:hover {
+		opacity: 1;
 	}
 	img {
 		position: fixed;
