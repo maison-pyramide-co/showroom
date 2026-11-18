@@ -10,8 +10,6 @@
 
 <style>
 	main {
-		background: black;
-		color: white;
 		padding-bottom: 120rem;
 	}
 </style>

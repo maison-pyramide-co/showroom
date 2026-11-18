@@ -98,7 +98,7 @@
 	}
 	main {
 		padding-top: calc(var(--h-h) + 32rem);
-		padding-bottom: 80rem;
+		padding-bottom: 160rem;
 		padding-inline: var(--p-i);
 		@media (width < 770px) {
 			padding-top: 64rem;
@@ -158,11 +158,11 @@
 		z-index: -1;
 	}
 	.img0 {
-		top: 370rem;
+		top: 300rem;
 		left: 70rem;
 	}
 	.img1 {
-		top: 500rem;
+		top: 400rem;
 		right: 80rem;
 	}
 </style>

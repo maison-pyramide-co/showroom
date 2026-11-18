@@ -5,16 +5,34 @@
 	import Menu from './menu.svelte';
 
 	let menuOpened = $state(false);
+	let headerHidden = $state(false);
 
 	$effect(() => {
 		if (page.url.pathname) menuOpened = false;
+		let lastY = window.scrollY;
+		const threshold = 10; // ignore trackpad/sensor jitter
+		const revealZone = 80; // always show near the very top
+
+		function onScroll() {
+			const y = window.scrollY;
+			const delta = y - lastY;
+
+			if (Math.abs(delta) < threshold) return;
+
+			headerHidden = y > revealZone && delta > 0;
+			lastY = y;
+		}
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
 	});
+
 	onMount(() => {
 		animation();
 	});
 </script>
 
-<header id="h"  style:opacity="0">
+<header id="h" style:opacity="0" class:hidden={headerHidden && !menuOpened}>
 	<div class="l d-o">
 		<a href="/brands">brands</a>
 		<a href="/services">services</a>
@@ -55,6 +73,10 @@
 		@media (width < 770px) {
 			justify-content: flex-end;
 		}
+	}
+	header.hidden {
+		transform: translateY(-100%);
+		opacity: 0 !important;
 	}
 	div {
 		display: flex;

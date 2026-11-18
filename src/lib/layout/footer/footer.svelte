@@ -1,50 +1,31 @@
 <script lang="ts">
-	import ChevW from '$lib/assets/icons/chev-w.svelte';
-	import ChevB from '$lib/assets/icons/chev-b.svelte';
 	import LogoB from '$lib/assets/icons/logo-b.svelte';
-	import MpgLogoW from '$lib/assets/icons/mpg-logo-w.svelte';
 	import MpgLogoB from '$lib/assets/icons/mpg-logo-b.svelte';
-	import { page } from '$app/state';
-	import LogoW from '$lib/assets/icons/logo-w.svelte';
-	const isBlack = $derived(page.url.pathname === '/contact');
 </script>
 
-<footer id="f" class:black={isBlack}>
+<footer id="f">
 	<div class="t">
 		<nav>
 			<a href="/contact">Contact Us</a>
 			<a href="/privacy">Privacy Policy</a>
 			<a href="/terms">Terms and Conditions</a>
 		</nav>
-		<button class="d-o">BOOK AN APPOINTMENT</button>
-		<!-- <nav class="d-o">
-			<a href="/">Privacy Policy</a>
-			<a href="/">FAQ</a>
-			<a href="/">Book An Appointment</a>
-		</nav> -->
+		<a class="d-o btn" href="mailto:showroom@maisonpyramide.com">BOOK AN APPOINTMENT</a>
 	</div>
 
 	<div class="logo">
-		{#if isBlack}
-			<LogoW />
-		{:else}
-			<LogoB />
-		{/if}
+		<LogoB />
 	</div>
 
-	<button class="m-o">BOOK AN APPOINTMENT</button>
+	<a class="m-o btn" href="mailto:showroom@maisonpyramide.com">BOOK AN APPOINTMENT</a>
 
 	<div class="b">
-		<div class="l">
-			{#if isBlack}
-				<MpgLogoW />
-			{:else}
-				<MpgLogoB />
-			{/if}
-		</div>
+		<a class="l" href="https://www.maisonpyramidegroup.com/" target="_blank">
+			<MpgLogoB />
+		</a>
 		<div class="r">
-			<a href="https://www.instagram.com/maisonpyramideshowroom/">INSTAGRAM</a>
-			<a href="mailto:showroom@maisonpyramide.com">SHOWROOM@MAISONPYRAMIDE.COM</a>
+			<a href="https://www.instagram.com/maisonpyramideshowroom/" target="_blank">INSTAGRAM</a>
+			<a href="mailto:showroom@maisonpyramide.com" target="_blank">SHOWROOM@MAISONPYRAMIDE.COM</a>
 		</div>
 	</div>
 </footer>
@@ -57,10 +38,6 @@
 		@media (width < 770px) {
 			padding-block: 16rem var(--p-i);
 		}
-	}
-	footer.black {
-		background-color: black;
-		color: white;
 	}
 
 	.t {
@@ -85,7 +62,7 @@
 		font-size: 14rem;
 		font-weight: 300;
 	}
-	button {
+	.btn {
 		font-size: 14rem;
 		padding: 4rem 24rem;
 		border-radius: 99rem;

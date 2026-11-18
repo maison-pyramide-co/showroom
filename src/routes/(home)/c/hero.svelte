@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Logo from '$lib/assets/icons/logo-w.svelte';
-	import banI from '$lib/assets/images/home/ban2.webp';
-	import banMI from '$lib/assets/images/home/ban-m.png';
+	import banI from '$lib/assets/images/home/ban.webp';
+	import banMI from '$lib/assets/images/home/ban-m.webp';
 </script>
 
 <section id="s-hero">
@@ -28,7 +28,6 @@
 		<div>SS</div>
 		<div>27</div>
 	</div>
-
 </section>
 
 <style>

@@ -70,21 +70,21 @@
 	}
 	input {
 		padding-bottom: 16rem;
-		border-bottom: 1px solid white;
+		border-bottom: 1px solid black;
 		width: 100%;
-		color: white;
+		color: black;
 		font-size: 20rem;
 	}
 	input::placeholder {
-		color: white;
+		color: black;
 		opacity: 70%;
 	}
 	button {
 		padding: 10rem 24rem;
-		border: 1px solid white;
+		border: 1px solid black;
 		border-radius: 100rem;
 		align-self: flex-end;
-		color: white;
+		color: black;
 		margin-top: 40rem;
 		@media (width < 770px) {
 			align-self: flex-start;

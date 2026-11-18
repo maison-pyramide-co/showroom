@@ -43,7 +43,12 @@
 </script>
 
 <section id="s-brands">
-	<h2 class="m-o">BRANDS</h2>
+	<p>
+		WE CONNECT EMERGING AND ESTABLISHED DESIGNERS IN CONTEMPORARY WOMENSWEAR AND JEWELRY WITH
+		LEADING RETAILERS WORLDWIDE THROUGH OUR GLOBAL SALES AND DISTRIBUTION NETWORK.
+	</p>
+
+	<!-- <h2 class="m-o">BRANDS</h2> -->
 	<div class="t">
 		{#each shown as src, i}
 			<img bind:this={imgEls[i]} {src} alt="" />
@@ -59,15 +64,16 @@
 	section {
 		padding: 160rem 90rem;
 		@media (width < 770px) {
-			padding: 48rem var(--p-i) 80rem;
+			padding: 80rem var(--p-i) 80rem;
 		}
 	}
 	.t {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		margin-top: 160rem;
 		@media (width < 770px) {
 			grid-template-columns: 1fr 1fr;
-			margin-top: 32rem;
+			margin-top: 48rem;
 		}
 	}
 	.b {
@@ -88,11 +94,19 @@
 			text-align: center;
 		}
 	}
+	p {
+		font-size: 50rem;
+		line-height: 1;
+		text-align: center;
+		@media (width < 770px) {
+			font-size: 24rem;
+		}
+	}
 	a {
 		font-size: 14rem;
 		padding: 4rem 24rem;
 		background-color: black;
 		color: white;
-		border-radius: 99rem;
+		/* border-radius: 99rem; */
 	}
 </style>

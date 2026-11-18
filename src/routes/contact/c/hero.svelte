@@ -1,11 +1,11 @@
 <script lang="ts">
-	import LogoW from '$lib/assets/icons/logo-w.svelte';
-	import banI from '$lib/assets/images/contact/ban.webp';
+	import LogoB from '$lib/assets/icons/logo-b.svelte';
+	import banI from '$lib/assets/images/contact/ban.png';
 </script>
 
 <section>
 	<a href="/" class="logo">
-		<LogoW />
+		<LogoB />
 	</a>
 	<figure>
 		<img src={banI} alt="" />
@@ -42,7 +42,7 @@
 	h2 {
 		position: absolute;
 		left: 0;
-		bottom: 80rem;
+		bottom: -30rem;
 		font-size: 200rem;
 		text-align: center;
 		width: 100%;

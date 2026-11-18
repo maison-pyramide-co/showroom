@@ -45,7 +45,7 @@
 	}
 	h1 {
 		margin-top: 88rem;
-		font-size: 55rem;
+		font-size: 50rem;
 		text-align: center;
 		font-weight: bold;
 		line-height: 1;
@@ -69,25 +69,33 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (width < 770px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 12rem;
+		}
 	}
 	figure {
 		width: 400rem;
 		aspect-ratio: 4/5;
+		@media (width < 770px) {
+			width: 250rem;
+		}
 	}
 	h3 {
-		margin-top: 8rem;
+		margin-top: 40rem;
 		font-size: 30rem;
 		font-weight: bold;
 		text-align: center;
 		@media (width < 770px) {
+			margin-top: 24rem;
 			font-size: 15rem;
 		}
 	}
 	p {
 		width: 750rem;
 		margin-top: 8rem;
-		font-size: 25rem;
-		/* text-transform: uppercase; */
+		font-size: 22rem;
 		text-align: center;
 		margin-inline: auto;
 		line-height: 1;
@@ -101,7 +109,7 @@
 		flex-shrink: 0;
 		text-transform: uppercase;
 		@media (width < 770px) {
-			width: 90rem;
+			width: unset;
 			font-size: 10rem;
 		}
 	}
