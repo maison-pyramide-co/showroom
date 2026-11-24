@@ -15,8 +15,8 @@
 	</div>
 
 	<div class="date">
-		30.09.2026<br />
-		07.10.2026
+		22.01.2027<br />
+		27.01.2027
 	</div>
 
 	<div class="location">
@@ -25,7 +25,7 @@
 	</div>
 
 	<div class="season">
-		<div>SS</div>
+		<div>PREFW</div>
 		<div>27</div>
 	</div>
 </section>

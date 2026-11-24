@@ -35,6 +35,7 @@
 		padding: 32rem var(--p-i);
 		display: flex;
 		flex-direction: column;
+		background-color: white;
 		@media (width < 770px) {
 			padding-block: 16rem var(--p-i);
 		}

@@ -13,9 +13,10 @@
 	};
 
 	let filteredBrands = $derived(
-		activeCategory && activeCategory !== 'all'
+		(activeCategory && activeCategory !== 'all'
 			? brands.filter((b) => b.category.includes(activeCategory.replace(/\s/g, '')))
 			: brands
+		).toSorted((a, b) => a.name.localeCompare(b.name))
 	);
 
 	let imgs: HTMLImageElement[] = [];
@@ -141,14 +142,15 @@
 		line-height: 1;
 		text-transform: capitalize;
 		cursor: pointer;
-		opacity: 70%;
+		/* opacity: 1; */
 		@media (width < 770px) {
 			font-size: 30rem;
 			line-height: 1.2;
 		}
 	}
 	li:hover {
-		opacity: 1;
+		/* opacity: 1; */
+		opacity: 70%;
 	}
 	img {
 		position: fixed;
